@@ -1,0 +1,39 @@
+extends base
+
+block content
+    br
+    .horizantal-line
+      span.title= (!title) ? name.category:title
+    br
+    main.main
+    .card-container
+        each prod in data
+                .card(style='width: 18rem;')
+                            .imagebg
+                                img.card-img-top(src=`/img/book-img/${prod.ImageCover}`, alt=`${prod.bookTitle}`)
+                            .card-body
+                                h5.card-title= prod.bookTitle
+                                p.card-text= prod.bookInfo.toString().substring(0,100)+"... " 
+                                    a(href=`/overview/book/${prod.slug}`) Read More
+                                li.list-group-item
+                                    span.first Author: 
+                                    = `${prod.author}`
+                                li.list-group-item
+                                    span.first Publisher: 
+                                    = `${prod.publisher}`
+                                li.list-group-item
+                                    span.first Category: 
+                                    = `${prod.category}`
+                            .card-body
+                                a.btn.btn-secondary(href=`/overview/book/${prod.slug}`) View
+                                a.btn.btn-secondary(href=prod.buyItNow) Buy It Now
+
+    .pagination
+        a(href='#') &laquo;
+        - const getPag = Math.ceil(data.length/6)+1
+        - for(let i=1;i<=getPag+1;i++){
+            a(href=`/overview/page/${i}`)= i
+        -}
+        a(href='#') &raquo;
+        
+        

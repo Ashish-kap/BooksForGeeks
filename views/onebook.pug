@@ -1,0 +1,16 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/oneBook.css')
+  title Document
+    
+.container
+  img(src=`/img/book-img/${data.ImageCover}`)
+  h1= data.bookTitle 
+  h3= `by ${data.author}`
+  button.goback(onclick='history.back()') <<
+  each parah in data.bookInfo
+    p= parah.split(',').join("\n")
+  a.button(href=data.buyItNow) Buy It Now

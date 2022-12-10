@@ -1,0 +1,34 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='/overview') BOOKSFORGEEKS
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto
+            li.nav-item.active
+                a.nav-link(href='/overview') HOME
+            li.nav-item
+                a.nav-link(href='/overview/bestseller' style="normal") BESTSELLER
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | CATEGORIES
+                ul.dropdown-menu.dropdown-menu-dark
+                    li
+                        a.dropdown-item(href=`/overview/category/Fiction`) FICTION
+                    li
+                        a.dropdown-item(href='/overview/category/Non-fiction') NON-FICTION
+                    li
+                        a.dropdown-item(href='/overview/category/Self-help') SELF-HELP
+                    li
+                        a.dropdown-item(href='/overview/category/Romance')  ROMANCE
+                    li
+                        a.dropdown-item(href='/overview/category/Thriller')  THRILLER 
+                    li
+                        a.dropdown-item(href='/overview/category/Others')  OTHERS 
+            li.nav-item
+                a.nav-link(href='/overview/contact') CONTACT
+            li.nav-item
+                a.nav-link(href='/overview/about') ABOUT
+
+
+
+
