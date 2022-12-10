@@ -1,6 +1,7 @@
 const express = require('express')
 const bookRoute = require('./routes/bookRoute')
 const viewRoutes = require('./routes/viewRoutes')
+const compression = require('compression')
 const path = require('path')
 const app = express()
 
@@ -13,7 +14,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(compression())
 //ROUTES
 app.use('/',viewRoutes)
 app.use('/api/books',bookRoute)

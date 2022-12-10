@@ -7,7 +7,7 @@ exports.getAllBook = async(req,res,next)=>{
     excludedField.forEach(el=> delete queryObj[el])
 
     let getBook = Book.find(queryObj);
-    console.log(queryObj)
+    
 
     //field
     if(req.query.field){
