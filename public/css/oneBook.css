@@ -97,8 +97,8 @@ p {
 @media (max-width: 600px){
 
     .container {
-            height: 60rem;
-            width: 25rem;
+            height: 55rem;
+            width: 24rem;
             margin: 20px auto;
             margin-top: 15rem;
             border-radius:70px;
@@ -149,8 +149,8 @@ p {
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            top: 53rem;
-            left: -5.5rem;
+            top: 48rem;
+            left: -6rem;
             cursor: pointer;
             width: 20rem;
             position: absolute;
